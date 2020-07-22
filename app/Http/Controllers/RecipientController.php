@@ -85,7 +85,7 @@ class RecipientController extends Controller
         ]);
         $recipient = new Recipient($request->all());
         $recipient->save();
-        $this->sendMessage($request->phone, 'User registration successful!');
+        $this->sendMessage($recipient->phone, "Thank you for subscribing, {$recipient->firstname}! In the future, you will be notified with tsunami alerts.");
         return back()->with(['success' => "Thank you for subscribing, {$recipient->firstname}! In the future, you will be notified with tsunami alerts."]);
     }
 
