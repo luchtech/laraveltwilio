@@ -11,6 +11,7 @@
                 <h1 class="font-weight-bold">Tsunami Text Blast System</h1>
                 <h2>for Barangay Matina Aplaya</h2>
             </div>
+            <a class="btn btn-primary btn-lg btn-block mt-5" href="{{ route('subscribe') }}" role="button">Subscibe to Tsunami Alerts</a>
             </div>
         </div>
     </div>

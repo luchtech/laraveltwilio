@@ -21,7 +21,7 @@
             <div class="card">
                 <div class="card-header">Send Text Blast</div>
                 <div class="card-body">
-                    <form method="POST" action="/custom">
+                    <form method="POST" action="{{ url('/custom') }}">
                         @csrf
                         <div class="form-group">
                             <select class="custom-select multiple" id="recipients" name="recipients[]" required>
