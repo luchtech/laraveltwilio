@@ -24,7 +24,7 @@
                     <form method="POST" action="{{ url('/custom') }}">
                         @csrf
                         <div class="form-group">
-                            <select class="custom-select multiple" id="recipients" name="recipients[]" required>
+                            <select class="custom-select" multiple size id="recipients" name="recipients[]" required>
                             @if (count($recipients) > 0)
                             <option value="">Choose one or more recipients</option>
                             @else
