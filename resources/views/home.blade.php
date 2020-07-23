@@ -25,9 +25,13 @@
                         @csrf
                         <div class="form-group">
                             <select class="custom-select multiple" id="recipients" name="recipients[]" required>
-                            <option value="">Open this select menu</option>
+                            @if (count($recipients) > 0)
+                            <option value="">Choose one or more recipients</option>
+                            @else
+                            <option value="">You have no registered recipients</option>
+                            @endif
                             @foreach ($recipients as $recipient)
-                            <option>{{$recipient->phone}}</option>
+                            <option value='{{$recipient->phone}}'>{{$recipient->phone}} ({{$recipient->firstname}} {{$recipient->middlename}} {{$recipient->lastname}})</option>
                             @endforeach
                             </select>
                             @error('message')
